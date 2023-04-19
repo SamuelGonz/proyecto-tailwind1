@@ -11,6 +11,7 @@ import {
     RiMenu3Fill,
     RiCloseLine,
     RiNotification3Line,
+    RiCheckLine,
 } from "react-icons/ri";
 
 export default function App() {
@@ -22,7 +23,7 @@ export default function App() {
             <div
                 className={`bg-[#1E1F24] fixed lg:left-0 top-0 w-72 h-full p-8 flex flex-col justify-between transition-all ${
                     showMenu ? "left-0" : "-left-full"
-                } overflow-y-auto`}
+                } overflow-y-auto z-30`}
             >
                 {/* Menu */}
                 <div className="">
@@ -92,15 +93,15 @@ export default function App() {
             </div>
             {/* Btn menu movil */}
             <button
-                className="lg:hidden fixed right-4 bottom-4 bg-[#1E1F24] text-orange-500 text-xl p-3 rounded-full"
+                className="lg:hidden fixed right-4 bottom-4 bg-[#1E1F24] text-orange-500 text-xl p-3 rounded-full z-40"
                 onClick={() => setShowMenu(!showMenu)}
             >
                 {showMenu ? <RiCloseLine /> : <RiMenu3Fill />}
             </button>
             {/* Content */}
-            <main className="pl-72">
+            <main className="lg:pl-72">
                 {/* Header */}
-                <header className="p-8 flex justify-end border-b border-gray-500">
+                <header className="fixed px-8 py-5 flex justify-end border-b border-gray-500 top-0 right-0 w-full z-20 bg-[#141517]">
                     <ul className="flex items-center gap-8">
                         <li>
                             <a
@@ -123,7 +124,55 @@ export default function App() {
                     </ul>
                 </header>
                 {/* Main Content */}
-                <div className="p-8">hola</div>
+                <div className="p-8 pt-24 h-screen overflow-y-auto">
+                    {/* Title */}
+                    <h1 className="text-4xl text-gray-300 mb-8">Plan & Pricing</h1>
+
+                    <div className="text-gray-300 grid grid-cols-3 gap-8">
+                        {/* Card1 */}
+                        <div className="bg-[#1E1F24] p-8 rounded-xl">
+                            <div className="flex items-center justify-center flex-col gap-4 mb-8">
+                                <div className="p-8 bg-purple-300 w-14 h-14 rounded-full text-2xl flex items-center justify-center">
+                                    😆
+                                </div>
+                                <div>
+                                    <h2 className="text-white text-xl text-center">Personal</h2>
+                                    <p className="text-gray-500 text-center mb-4">Lorem ipsum dolor sit.</p>
+                                    <p className="text-center text-xl uppercase tracking-[4px] font-boldi">Free</p>
+                                    <p className="text-gray-500 text-center mb-8 text-sm">For a lifetime</p>
+                                    <button className="bg-[#141517] py-2 px-8 rounded-lg hover:text-white active:outline transition-all">
+                                        Current plan
+                                    </button>
+                                </div>
+                            </div>
+                            <ul className="flex flex-col gap-2 text-gray-500 items-center">
+                                <li className="flex items-center gap-4">
+                                    <RiCheckLine className="text-green-500 text-2xl" /> Lorem, ipsum dolor.
+                                </li>
+
+                                <li className="flex items-center gap-4">
+                                    <RiCheckLine className="text-green-500 text-2xl" /> Lorem, ipsum dolor.
+                                </li>
+
+                                <li className="flex items-center gap-4">
+                                    <RiCheckLine className="text-green-500 text-2xl" /> Lorem, ipsum dolor.
+                                </li>
+
+                                <li className="flex items-center gap-4">
+                                    <RiCheckLine className="text-green-500 text-2xl" /> Lorem, ipsum dolor.
+                                </li>
+
+                                <li className="flex items-center gap-4">
+                                    <RiCheckLine className="text-green-500 text-2xl" /> Lorem, ipsum dolor.
+                                </li>
+                            </ul>
+                        </div>
+                        {/* Card2 */}
+                        <div className="bg-[#1E1F24]">Plan2</div>
+                        {/* Card3 */}
+                        <div className="bg-[#1E1F24]">Plan3</div>
+                    </div>
+                </div>
             </main>
         </div>
     );
