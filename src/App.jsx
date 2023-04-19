@@ -128,17 +128,102 @@ export default function App() {
                     {/* Title */}
                     <h1 className="text-4xl text-gray-300 mb-8">Plan & Pricing</h1>
 
-                    <div className="text-gray-300 grid grid-cols-3 gap-8">
+                    <div className="text-gray-300 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center md:justify-items-stretch">
                         {/* Card1 */}
-                        <div className="bg-[#1E1F24] p-8 rounded-xl">
+                        <div className="bg-[#1E1F24] p-8 rounded-xl max-w-sm">
                             <div className="flex items-center justify-center flex-col gap-4 mb-8">
-                                <div className="p-8 bg-purple-300 w-14 h-14 rounded-full text-2xl flex items-center justify-center">
+                                <div className="p-8 bg-purple-600 w-14 h-14 rounded-full text-2xl flex items-center justify-center">
                                     😆
                                 </div>
-                                <div>
-                                    <h2 className="text-white text-xl text-center">Personal</h2>
+                                <div className="flex flex-col items-center justify-center">
+                                    <h2 className="text-white text-xl text-center uppercase tracking-[6px]">
+                                        Personal
+                                    </h2>
                                     <p className="text-gray-500 text-center mb-4">Lorem ipsum dolor sit.</p>
                                     <p className="text-center text-xl uppercase tracking-[4px] font-boldi">Free</p>
+                                    <p className="text-gray-500 text-center mb-8 text-sm">For a lifetime</p>
+                                    <button className="bg-[#141517] py-2 px-8 rounded-lg hover:text-white active:outline transition-all">
+                                        Current plan
+                                    </button>
+                                </div>
+                            </div>
+                            <ul className="flex flex-col gap-2 text-gray-500 items-center">
+                                <li className="flex items-center gap-4">
+                                    <RiCheckLine className="text-green-500 text-2xl" /> Lorem, ipsum dolor.
+                                </li>
+
+                                <li className="flex items-center gap-4">
+                                    <RiCheckLine className="text-green-500 text-2xl" /> Lorem, ipsum dolor.
+                                </li>
+
+                                <li className="flex items-center gap-4 opacity-40">
+                                    <RiCloseLine className="text-red-500 text-2xl" /> Lorem, ipsum dolor.
+                                </li>
+
+                                <li className="flex items-center gap-4 opacity-40">
+                                    <RiCloseLine className="text-red-500 text-2xl" /> Lorem, ipsum dolor.
+                                </li>
+
+                                <li className="flex items-center gap-4 opacity-40">
+                                    <RiCloseLine className="text-red-500 text-2xl" /> Lorem, ipsum dolor.
+                                </li>
+                            </ul>
+                        </div>
+                        {/* Card2 */}
+                        <div className="bg-[#664efa] p-8 rounded-xl max-w-sm">
+                            <div className="flex items-center justify-center flex-col gap-4 mb-8">
+                                <div className="p-8 bg-purple-200 w-14 h-14 rounded-full text-2xl flex items-center justify-center">
+                                    🎉
+                                </div>
+                                <div className="flex flex-col items-center justify-center">
+                                    <h2 className="text-white text-xl text-center uppercase tracking-[6px]">
+                                        Professional
+                                    </h2>
+                                    <p className="text-gray-300 text-center mb-4">Lorem ipsum dolor sit.</p>
+                                    <p className="text-center text-xl uppercase tracking-[4px] font-bold text-white">
+                                        $99.99
+                                    </p>
+                                    <p className="text-gray-300 text-center mb-8 text-sm">For a lifetime</p>
+                                    <button className="bg-[#141517] py-2 px-8 rounded-lg hover:text-white active:outline transition-all">
+                                        Current plan
+                                    </button>
+                                </div>
+                            </div>
+                            <ul className="flex flex-col gap-2 text-gray-100 items-center">
+                                <li className="flex items-center gap-4">
+                                    <RiCheckLine className="text-green-500 text-2xl" /> Lorem, ipsum dolor.
+                                </li>
+
+                                <li className="flex items-center gap-4">
+                                    <RiCheckLine className="text-green-500 text-2xl" /> Lorem, ipsum dolor.
+                                </li>
+
+                                <li className="flex items-center gap-4">
+                                    <RiCheckLine className="text-green-500 text-2xl" /> Lorem, ipsum dolor.
+                                </li>
+
+                                <li className="flex items-center gap-4">
+                                    <RiCheckLine className="text-green-500 text-2xl" /> Lorem, ipsum dolor.
+                                </li>
+
+                                <li className="flex items-center gap-4">
+                                    <RiCloseLine className="text-red-500 text-2xl" />
+                                    <span className="opacity-40">Lorem, ipsum dolor.</span>
+                                </li>
+                            </ul>
+                        </div>
+                        {/* Card3 */}
+                        <div className="bg-[#1E1F24] p-8 rounded-xl max-w-sm">
+                            <div className="flex items-center justify-center flex-col gap-4 mb-8">
+                                <div className="p-8 bg-purple-300 w-14 h-14 rounded-full text-2xl flex items-center justify-center">
+                                    🔥
+                                </div>
+                                <div>
+                                    <h2 className="text-white text-xl text-center uppercase tracking-[6px]">
+                                        Enterprise
+                                    </h2>
+                                    <p className="text-gray-500 text-center mb-4">Lorem ipsum dolor sit.</p>
+                                    <p className="text-center text-xl uppercase tracking-[4px] font-boldi">$199.99</p>
                                     <p className="text-gray-500 text-center mb-8 text-sm">For a lifetime</p>
                                     <button className="bg-[#141517] py-2 px-8 rounded-lg hover:text-white active:outline transition-all">
                                         Current plan
@@ -167,10 +252,6 @@ export default function App() {
                                 </li>
                             </ul>
                         </div>
-                        {/* Card2 */}
-                        <div className="bg-[#1E1F24]">Plan2</div>
-                        {/* Card3 */}
-                        <div className="bg-[#1E1F24]">Plan3</div>
                     </div>
                 </div>
             </main>
